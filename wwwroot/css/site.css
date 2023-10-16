@@ -1,18 +1,41 @@
+/* Configuración del tamaño de fuente base para pantallas más pequeñas */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
+/* Ajuste del tamaño de fuente base para pantallas más grandes (más de 768px de ancho) */
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
+/* Estilos adicionales */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    /* Agregar un fondo de color al cuerpo */
+    background-color: #f0f0f0;
+    /* Establecer un tipo de fuente y un color de texto */
+    font-family: Arial, sans-serif;
+    color: #333;
 }
+
+/* Estilo para los encabezados h1 en el cuerpo */
+h1 {
+    color: #007bff; /* Cambiar color del texto a azul */
+}
+
+/* Estilo para los enlaces en el cuerpo */
+a {
+    color: #007bff; /* Cambiar color del enlace a azul */
+    text-decoration: none; /* Quitar subrayado predeterminado del enlace */
+}
+
+    a:hover {
+        text-decoration: underline; /* Agregar subrayado al pasar el mouse sobre el enlace */
+    }
