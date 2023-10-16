@@ -40,15 +40,44 @@
             @RenderBody()
         </main>
     </div>
-
+    <div class="container">
+        <main role="main" class="pb-3">
+            <!-- Campo de texto y área para mostrar el mensaje -->
+            <div class="form-group">
+                <label for="welcomeText">Mensaje de Bienvenida:</label>
+                <input type="text" class="form-control" id="welcomeText">
+            </div>
+            <div id="welcomeMessage"></div>
+            @RenderBody()
+        </main>
+    </div>
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - MartinZumarraga_Ejercicio1CF - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
+    <!-- Bootstrap y otros scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- Código JavaScript adicional -->
+    <script>
+        // Asociar el botón y el div por sus IDs
+        var myButton = document.getElementById('myButton');
+        var myDiv = document.getElementById('myDiv');
+
+        // Función que se ejecutará cuando se haga clic en el botón
+        function cambiarColorFondo() {
+            // Cambiar el color de fondo del div a rojo
+            myDiv.style.backgroundColor = 'red';
+        }
+
+        // Agregar un event listener al botón para detectar clics y ejecutar la función cambiarColorFondo
+        myButton.addEventListener('click', cambiarColorFondo);
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

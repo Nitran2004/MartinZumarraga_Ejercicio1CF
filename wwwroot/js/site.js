@@ -1,4 +1,14 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿< !-- ... (otros elementos HTML) ... -->
 
-// Write your JavaScript code.
+< !--JavaScript adicional-- >
+    <script>
+    // Tu código JavaScript adicional puede ir aquí
+    // Por ejemplo:
+    // function miFuncion() {
+    //     // Hacer algo interesante aquí
+    // }
+</script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body >
+</html >
